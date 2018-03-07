@@ -1,0 +1,130 @@
+#wrap {
+	width: 100%;
+	height: 100%;
+}
+#board {
+    width: 300px;
+    height: 300px;
+}
+
+.square {
+    float: left;
+    width: 33.333333333%;
+    height: 33.333333333%;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #fff;
+    will-change: border-color;
+}
+
+.square {
+    float: left;
+    width: 33.333333333%;
+    height: 33.333333333%;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #000;
+    will-change: border-color;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.square .x, .square .o {
+    position: relative;
+    will-change: transform;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: appear 0.15s cubic-bezier(0.5, 1.8, 0.1, 1.1);
+    -moz-animation: appear 0.15s cubic-bezier(0.5, 1.8, 0.1, 1.1);
+    animation: appear 0.15s cubic-bezier(0.5, 1.8, 0.1, 1.1);
+}
+
+.x:before, .x:after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #000;
+    left: 41px;
+    top: 11px;
+    width: 8px;
+    height: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.x {
+    width: 100%;
+    height: 100%;
+}
+
+.x:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.x:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.square .x, .square .o {
+    position: relative;
+    will-change: transform;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: appear 0.15s cubic-bezier(0.5, 1.8, 0.1, 1.1);
+    -moz-animation: appear 0.15s cubic-bezier(0.5, 1.8, 0.1, 1.1);
+    animation: appear 0.15s cubic-bezier(0.5, 1.8, 0.1, 1.1);
+}
+
+.o {
+    left: 9.666667%;
+    top: 9.666667%;
+    width: 66.666666667%;
+    height: 66.666666667%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 8px solid #000;
+}
+
+.box{
+	margin: 10px;
+	float: left;
+}
+
+#scoreboard{
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}
+#scoreboard h2{
+	text-align: center;
+}
+
+#currentstep{
+	position:relative;
+	width:50px;
+	height:50px;
+	margin: 0 auto;
+}
+
+.square{
+	border: 1px solid black;
+}
+
+.square.winner{
+    background: #6bbf2d;
+}
+
+#currentstep  .x:before, #currentstep .x:after {
+    left: 22px;
+    top: 3px;
+}
+
+.complete{
+	background: gray;
+}
